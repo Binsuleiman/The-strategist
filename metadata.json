@@ -1,0 +1,6 @@
+{
+  "name": "THE STRATEGIST",
+  "description": "Discover personalized business opportunities, stress-test your ideas with an AI Devil's Advocate, and turn the strongest into an actionable MVP blueprint.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

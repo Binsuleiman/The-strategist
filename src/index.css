@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Anton', impact, sans-serif;
+    --font-body: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --charcoal: #EDEDED;
+    --dark-gray: #1C1C1F;
+    --golden-yellow: #F59E0B;
+    --sage: #A1A1AA;
+    --light-bg: #0A0A0B;
+    --card-bg: #131315;
+    --border-color: #27272A;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0A0A0B;
+    color: #EDEDED;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+}
+
+.font-anton {
+  font-family: 'Anton', impact, sans-serif;
+}
+
+.font-satoshi {
+  font-family: 'Satoshi', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Subtle grid background for dark mode */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Yellow rotated highlight */
+.highlight-yellow {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-yellow::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: 15%;
+  bottom: 10%;
+  background: #F59E0B;
+  opacity: 0.85;
+  z-index: -1;
+  transform: rotate(-2deg);
+  border-radius: 2px;
+}
+
+.highlight-yellow-skew {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.highlight-yellow-skew::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 10%;
+  bottom: 5%;
+  background: #D97706;
+  opacity: 0.9;
+  z-index: -1;
+  transform: rotate(-3deg);
+  border-radius: 3px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
